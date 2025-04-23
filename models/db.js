@@ -1,12 +1,20 @@
 const { Sequelize } = require('sequelize');
 require('dotenv').config();
 
-const sequelize = new Sequelize(process.env.DATABASE_URL, {
-  dialectOptions: {
-    ssl: false,
-  }
-});
+let config = {
+  logging: false,
+};
 
+if(process.env.NODE_ENV === 'production'){
+  config.dialectOptions = {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false,
+    },
+  };
+};
+
+const sequelize = new Sequelize(process.env.DATABASE_URL, config);
 const connectToDatabase = async () => {
   try {
     await sequelize.authenticate();
