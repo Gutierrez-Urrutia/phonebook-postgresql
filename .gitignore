@@ -1,0 +1,54 @@
+
+# Dependencias
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Entorno
+.env
+.env.test
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Archivos de construcción
+/dist
+/build
+/out
+
+# Logs
+logs/
+*.log
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Archivos del editor
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.project
+.settings/
+
+# Archivos temporales
+.tmp/
+.temp/
+
+# Carpeta de cobertura
+coverage/
+
+# Configuración específica de cada usuario
+.npmrc
+.yarnrc
+.eslintcache
+
+# Rest Client (VS Code)
+*.rest

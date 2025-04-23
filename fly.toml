@@ -1,0 +1,26 @@
+# fly.toml app configuration file generated for phonebook-backend-lively-glitter-8673 on 2025-04-22T15:48:47-04:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'phonebook-backend-lively-glitter-8673'
+primary_region = 'gru'
+
+[build]
+
+[env]
+
+PORT="3000"
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
