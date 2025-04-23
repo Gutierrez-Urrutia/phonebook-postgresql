@@ -15,7 +15,6 @@ yarn.lock
 .env.production.local
 
 # Archivos de construcción
-/dist
 /build
 /out
 
